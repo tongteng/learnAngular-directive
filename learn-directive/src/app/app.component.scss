@@ -1,0 +1,28 @@
+p{
+	height: 3em;
+	line-height: 3em;
+	border: 1px solid red;
+	padding: 0 30px;
+}
+
+.myContent{
+	border: 1px solid yellow;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 30px;
+	color: green;
+	cursor: pointer;
+}
+
+.warning{
+	border: 1px solid black;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bolder;
+	color: #fff;
+	cursor: pointer;
+	background-color: red;
+}
