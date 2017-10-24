@@ -12,7 +12,6 @@ export class WarningTextDirective {
     this.preText = this.el.nativeElement.innerText;
   }
   @HostListener('click') onclick() {
-    console.log(this.el.nativeElement.innerText)
     if(this.myClass == 'myContent') {
       this.myClass = 'warning';
       this.el.nativeElement.innerText = '让你点你就点啊！泰拳警告！！！';
@@ -21,5 +20,4 @@ export class WarningTextDirective {
       this.el.nativeElement.innerText = this.preText;
     }
   }
-
 }

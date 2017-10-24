@@ -1,12 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <p my-High-Light highLight="#f50">我就是我，不一样的烟火</p>
-      <p my-High-Light highLight="#f50">我就是我，不一样的烟火</p>
-      <p my-High-Light highLight="#f50">我就是我，不一样的烟火</p>
+      <input type="radio" name="colors" (click)="color='green'">Green
+      <input type="radio" name="colors" (click)="color='yellow'">Yellow
+      <input type="radio" name="colors" (click)="color='blue'">Blue
+      <p [my-High-Light]="color" defaulthighLight="pink">我就是我，不一样的烟火</p>
+      <p [my-High-Light]="color">我就是我，不一样的烟火</p>
+      <p [my-High-Light]="color">我就是我，不一样的烟火</p>
     </div>
     <div class="col-xs-12">
       <div class="myContent" warning-text>你敢不敢点我一下试试！</div>
+    </div>
+    <div class="col-xs-12">
+      <div *ngFor="let item of [1, 2, 3]">
+        <card *appdelay="item * 500">第{{item}}张卡片</card>
+      </div>
     </div>
   </div>
 </div>

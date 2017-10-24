@@ -5,14 +5,13 @@ import { Directive, Input, HostListener, ElementRef } from '@angular/core';
 })
 export class MyHighLightDirective {
   @Input()
-  public highLight:string = "";
+  public defaulthighLight:string = "";
+  @Input('my-High-Light') highLight:string;
   constructor(private el: ElementRef) { 
     // this.el.nativeElement.style.backgroundColor = "#f60";
   }
-  // public $p = this.el.nativeElement;
   @HostListener('mouseenter') onmouseenter() {
-    // this.$p.style.backgroundColor = this.highLight;
-    this.doHighLight(this.highLight);
+    this.doHighLight(this.highLight || this.defaulthighLight || "red");
   }
 
   @HostListener('mouseout') onmouseout() {
